@@ -12,3 +12,5 @@ Thumbs.db
 materials
 temp
 !node_modules\geteventlisteners\src\getEventListeners.js
+vendor/
+!vendor/ishop
