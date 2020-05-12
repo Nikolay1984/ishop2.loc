@@ -11,6 +11,5 @@ Thumbs.db
 .vscode/
 materials
 temp
+!node_modules\get\bla.txt
 !node_modules\geteventlisteners\src\getEventListeners.js
-vendor/
-!vendor/ishop
