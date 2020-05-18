@@ -12,8 +12,12 @@ class App
         $query = trim($_SERVER['QUERY_STRING'], "/");
         session_start();
         self::$app = Registry::instance();
+        $this->getParams();
     }
     protected function getParams(){
         $params = require_once CONF."/params.php";
+        foreach ($params as $key=>$value){
+            self::$app::setProperty($key, $value);
+        }
     }
 }
