@@ -1,0 +1,50 @@
+[2020-08-07 08:53:20] : Сообщение: ; Файл: ; Строка: !
+=============================
+[2020-08-07 08:53:21] : Сообщение: ; Файл: ; Строка: !
+=============================
+[2020-08-07 08:55:08] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 08:55:09] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:20:07] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:20:07] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:20:31] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:20:31] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:21:36] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:21:37] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:47:51] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:47:52] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:48:07] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:48:08] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:51:47] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:51:48] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:51:50] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 09:51:51] : Сообщение: My exeption; Файл: C:\OpenServer\domains\ishop2.loc\public\index.php; Строка: 9!
+=============================
+[2020-08-07 13:18:04] : Сообщение: ; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
+[2020-08-07 13:19:07] : Сообщение: ; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
+[2020-08-07 13:25:48] : Сообщение: ; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
+[2020-08-07 13:27:28] : Сообщение: ; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
+[2020-08-07 13:27:51] : Сообщение: ; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
+[2020-08-07 13:49:37] : Сообщение: Class 'C:\OpenServer\domains\ishop2.loc/app/controllers/MainController.php' not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
+[2020-08-07 13:51:49] : Сообщение: Class 'C:\OpenServer\domains\ishop2.loc/app/controllers/MainController' not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
