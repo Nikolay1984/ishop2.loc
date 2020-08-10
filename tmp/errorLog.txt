@@ -48,3 +48,129 @@
 =============================
 [2020-08-07 13:51:49] : Сообщение: Class 'C:\OpenServer\domains\ishop2.loc/app/controllers/MainController' not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
 =============================
+[2020-08-10 07:21:40] : Сообщение: контроллер \app\controllers\MainControllerController не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 35!
+=============================
+[2020-08-10 07:21:41] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 39!
+=============================
+[2020-08-10 07:22:59] : Сообщение: контроллер \app\controllers\MainControllerController не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 36!
+=============================
+[2020-08-10 07:22:59] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-10 07:23:23] : Сообщение: Class name must be a valid object or a string; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 23!
+=============================
+[2020-08-10 07:23:23] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-10 07:23:30] : Сообщение: контроллер \app\controllers\MainControllerController не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 36!
+=============================
+[2020-08-10 07:23:30] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-10 07:25:00] : Сообщение: контроллер \app\controllers\MainControllerController не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 36!
+=============================
+[2020-08-10 07:25:00] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-10 07:25:42] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-10 08:43:51] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 09:42:07] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 09:43:21] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 09:43:53] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 09:44:01] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:47:52] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:47:54] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:47:56] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:48:57] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:49:12] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:50:21] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:51:34] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:52:02] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:53:48] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:55:26] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:56:33] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 10:57:26] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 11:26:43] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 11:28:15] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-08-10 11:36:50] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:36:52] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:37:28] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:37:29] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:46:48] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:46:48] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:47:12] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:47:13] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:56:57] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:56:57] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:58:00] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 11:58:00] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:00:52] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:00:53] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:01:22] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:01:22] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:01:39] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:01:39] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:02:15] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:02:15] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:04:01] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:04:01] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 42!
+=============================
+[2020-08-10 12:14:22] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 12:14:36] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 12:14:47] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 12:15:02] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 12:16:33] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 13:10:50] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 14:08:17] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 14:10:04] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 14:10:41] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 14:15:46] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================
+[2020-08-10 14:55:22] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 43!
+=============================

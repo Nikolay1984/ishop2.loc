@@ -4,10 +4,17 @@
 namespace app\controllers;
 
 
+use app\models\AppModel;
+
 class MainController extends AppController
 {
     public function indexAction(){
-        echo "index";
+
+        $this->setMeta("hockers","escort",'pussy,foxy');
+        $name = "Petja";
+        $age = 33;
+        $this->set(compact("name","age"));
+
     }
 
     public function testAction(){

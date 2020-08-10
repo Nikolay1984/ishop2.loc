@@ -13,3 +13,6 @@ define("PATH",  "{$_SERVER['REQUEST_SCHEME']}://{$_SERVER['HTTP_HOST']}");
 define("ADMIN",  PATH . '/admin');
 
 require_once ROOT . '/vendor/autoload.php';
+require_once LIBS . '/functions.php';
+require_once LIBS . '/rb.php';
+require CONF."/routers.php";

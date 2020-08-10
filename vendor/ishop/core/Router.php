@@ -18,8 +18,11 @@ class Router
     }
 
     public static function dispatch($url){
+       $url =   self::removeQuerySting($url);
+       echo $url;
         if(self::matcheRouter($url)){
             $controller = "\app\controllers\\". self::$route["prefix"].self::upperCamelCase(self::$route["controller"])."Controller";
+
 
 
             if(class_exists($controller)){
@@ -28,6 +31,7 @@ class Router
 
                 if(method_exists($instController,  $action)){
                     $instController->$action();
+                    $instController->getView();
                 }else{
                     throw new \Exception("action $controller::$action  не существует",505);
                 }
@@ -40,7 +44,7 @@ class Router
         }
     }
 
-    public static function matcheRouter($url){
+    private static function matcheRouter($url){
         foreach (self::$routes as $pattern=>$arrRoute){
             if (preg_match("#$pattern#i", $url,$matche)){
 
@@ -48,6 +52,7 @@ class Router
 
                     if(is_string($key)){
                         $arrRoute[$key]=$value;
+
                     }
 
 
@@ -68,7 +73,7 @@ class Router
         return false;
     }
 
-    public static function upperCamelCase($str){
+    private static function upperCamelCase($str){
         $arrStr=explode("-", $str);
         $resStr='';
         foreach ($arrStr as $value){
@@ -77,7 +82,14 @@ class Router
         return $resStr;
     }
 
-    public static function lowerCamelCase($str){
+    private static function lowerCamelCase($str){
         return lcfirst(self::upperCamelCase($str));
+    }
+    private static function removeQuerySting($url){
+        $arrUrl = explode("&", $url);
+        if(stristr($arrUrl[0], "=")){
+            return "";
+        }
+        return rtrim($arrUrl[0],"/");
     }
 }
