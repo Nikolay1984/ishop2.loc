@@ -23,8 +23,6 @@ class Router
         if(self::matcheRouter($url)){
             $controller = "\app\controllers\\". self::$route["prefix"].self::upperCamelCase(self::$route["controller"])."Controller";
 
-
-
             if(class_exists($controller)){
                 $instController = new $controller(self::$route);
                 $action = self::lowerCamelCase( self::$route["action"]."Action");

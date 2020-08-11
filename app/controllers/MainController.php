@@ -11,9 +11,10 @@ class MainController extends AppController
     public function indexAction(){
 
         $this->setMeta("hockers","escort",'pussy,foxy');
-        $name = "Petja";
-        $age = 33;
-        $this->set(compact("name","age"));
+        
+        $brands = \R::find("brand","LIMIT 3");
+        $popularProducts = \R::find("product","hit > '0' LIMIT 8");
+        $this->set(compact('brands','popularProducts'));
 
     }
 
