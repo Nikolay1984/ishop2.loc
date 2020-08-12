@@ -4,6 +4,8 @@
 namespace ishop;
 
 
+use app\widgets\currency\Currency;
+
 class App
 {
     public static $app;

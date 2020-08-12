@@ -34,7 +34,7 @@ class View
 
     }
     public function render($date){
-        $viewPath = APP . "/views/" . $this->prefix . "/" . $this->controller . "/" .$this->view .".php";
+        $viewPath = APP . "/views/" . $this->prefix  . $this->controller . "/" .$this->view .".php";
         if(is_array($date)){
             extract($date);
         }

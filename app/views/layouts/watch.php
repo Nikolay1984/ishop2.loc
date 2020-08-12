@@ -20,16 +20,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </head>
 <body>
 <!--top-header-->
+
+
 <div class="top-header">
     <div class="container">
         <div class="top-header-main">
             <div class="col-md-6 top-header-left">
                 <div class="drop">
                     <div class="box">
-                        <select tabindex="4" class="dropdown drop">
-                            <option value="" class="label">Dollar :</option>
-                            <option value="1">Dollar</option>
-                            <option value="2">Euro</option>
+                        <select id="currency" tabindex="4" class="dropdown drop">
+                            <?= new \app\widgets\currency\Currency()  ?>
                         </select>
                     </div>
                     <div class="box1">
@@ -267,6 +267,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
 </script>
 
+<script src="js/main.js"></script>
 
 <!--start-menu-->
 

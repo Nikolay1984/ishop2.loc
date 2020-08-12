@@ -19,7 +19,6 @@ class Router
 
     public static function dispatch($url){
        $url =   self::removeQuerySting($url);
-       echo $url;
         if(self::matcheRouter($url)){
             $controller = "\app\controllers\\". self::$route["prefix"].self::upperCamelCase(self::$route["controller"])."Controller";
 

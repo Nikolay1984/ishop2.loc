@@ -58,7 +58,8 @@
                         <div class="product-bottom">
                             <h3><a href="product/<?= $product->alias ?>" /> <?= $product->title ?> </a></h3>
                             <p>Explore Now</p>
-                            <h4><a class="add-to-cart-link" href="cart/add?id=<?= $product->id ?>"><i></i></a> <span class=" item_price">$ <?= $product->price ?></span>
+                            <h4><a class="add-to-cart-link" href="cart/add?id=<?= $product->id ?>"><i></i></a>
+                                <span class=" item_price">$ <?= $product->price ?></span>
                                 <?php if($product->old_price): ?>
                                     <small><del><?= $product->old_price ?></del></small>
                                 <?php endif; ?>
