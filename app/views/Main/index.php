@@ -47,6 +47,7 @@
 <!--product-starts-->
 
 <?php if($popularProducts): ?>
+<?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 <div class="product">
     <div class="container">
         <div class="product-top">
@@ -59,9 +60,9 @@
                             <h3><a href="product/<?= $product->alias ?>" /> <?= $product->title ?> </a></h3>
                             <p>Explore Now</p>
                             <h4><a class="add-to-cart-link" href="cart/add?id=<?= $product->id ?>"><i></i></a>
-                                <span class=" item_price">$ <?= $product->price ?></span>
+                                <span class=" item_price"><?= $curr["symbol_left"] ?><?= round($product->price * $curr["value"]) ?><?= $curr["symbol_right"] ?></span>
                                 <?php if($product->old_price): ?>
-                                    <small><del><?= $product->old_price ?></del></small>
+                                    <small><del><?= $curr["symbol_left"] ?><?= round($product->old_price * $curr["value"]) ?></del></small>
                                 <?php endif; ?>
                             </h4>
                         </div>

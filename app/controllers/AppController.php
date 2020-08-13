@@ -8,6 +8,7 @@ use app\models\AppModel;
 use app\widgets\currency\Currency;
 use ishop\App;
 use ishop\base\Controller;
+use ishop\Cache;
 use ishop\Registry;
 
 class AppController extends Controller
@@ -19,18 +20,24 @@ class AppController extends Controller
 
         App::$app->setProperty("currencies", Currency::getCurrencies());
         App::$app->setProperty("currency", Currency::getCurrency(App::$app->getProperty("currencies")));
+        App::$app->setProperty("cats", self::cacheCategory());
 
     }
 
-    public function currencyExchange($arrProducts){
-        //TODO
-        $currency = $_COOKIE["currency"];
-        $currPrev = $_COOKIE["currPrev"];
+    public static function cacheCategory(){
+        $cache = Cache::instance();
+        $category = $cache->get("cats");
+        if(!$category){
 
-        if (!$currency){
-            return;
+            $category = \R::getAssoc('SELECT * FROM category');
+            $cache->set('cats', $category);
+
         }
-//        foreach ($arrProducts as )
+        return $category;
+
+
     }
+
+
 
 }
