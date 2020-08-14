@@ -6,6 +6,7 @@ namespace app\controllers;
 
 use app\models\AppModel;
 use app\widgets\currency\Currency;
+use ishop\App;
 
 class MainController extends AppController
 {
@@ -15,6 +16,7 @@ class MainController extends AppController
         
         $brands = \R::find("brand","LIMIT 3");
         $popularProducts = \R::find("product","hit > '0' LIMIT 8");
+//        debug(App::$app->getProperty('cats'),1);
 
         $this->set(compact('brands','popularProducts'));
 

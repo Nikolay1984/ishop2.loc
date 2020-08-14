@@ -52,6 +52,7 @@ class View
 
             $layoutPath = APP . "/views/layouts/"  . $this->layout .".php";
 
+
             if(file_exists($layoutPath)){
 
                 require_once "$layoutPath";
