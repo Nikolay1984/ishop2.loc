@@ -46,10 +46,6 @@ class Menu
                 $this->data = \R::getAssoc('SELECT * FROM {$this->table}');
             }
             $this->tree = $this->getTree($this->data);
-
-
-
-
             $this->menuHtml = $this->getMenuHtml($this->tree);
 
             if($this->cache){
