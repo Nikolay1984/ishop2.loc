@@ -4,6 +4,7 @@
 namespace app\controllers;
 
 
+use app\models\BreadCrumbs;
 use app\models\Product;
 
 class ProductController extends AppController
@@ -27,45 +28,17 @@ related_product.product_id = ? ",[$product["id"]]);
         }
 
 
-//        function getVisitedProducts($product){
-//            if (!isset($_COOKIE["visitedProducts"])){
-//                $visitedProducts = [];
-//            }else{
-//                $visitedProducts = unserialize($_COOKIE["visitedProducts"]);
-//            }
-//
-//            if (!in_array($product["id"], $visitedProducts)){
-//                if(count($visitedProducts) == 6){
-//                    array_shift($visitedProducts);
-//                }
-//                $visitedProducts[]=$product["id"];
-//            }
-//
-//            $dataProducts = \R::findLike( 'product', ['id' => $visitedProducts] );
-//            $resProducts = [];
-//            for($i = 0 ; $i < count($visitedProducts); $i++){
-//                $id = $visitedProducts[$i];
-//                foreach ($dataProducts as $val){
-//                    if($val['id'] == $id){
-//                        $resProducts[]=$val;
-//                    }
-//                }
-//            }
-//
-//            setcookie("visitedProducts", serialize($visitedProducts),time()*3600*24, "/" );
-//            array_pop($resProducts);
-//            return $resProducts;
-//
-//        }
-
-//        $visitedProducts = getVisitedProducts($product);
-
         $productModelInst = new Product();
-        $visitedProducts = $productModelInst->getDataProducts();
-        $visitedProducts = $productModelInst->rangeProducts($visitedProducts,3);
+        $visitedProducts = $productModelInst->getDataProducts(3);
         $productModelInst->setProductId($product["id"]);
+        $breadCrumbs = array_reverse(BreadCrumbs::getBreadCrumbs($product["category_id"], $product["title"]));
+        
+        $productModifications = \R::findAll("modification", "product_id = ?", [$product['id']]);
 
-        $this->set(compact('product', "related", "gallery","visitedProducts"));
+//debug($productModifications,1);
+
+
+        $this->set(compact('product', "related", "gallery","visitedProducts","breadCrumbs","productModifications"));
 
     }
 

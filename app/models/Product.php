@@ -29,9 +29,16 @@ class Product extends AppModel
         }
     }
 
-    public function getDataProducts(){
+    public function getDataProducts($tail = 0){
         $visitedProducts = $this->getAllProductsId();
+
+
         if ($visitedProducts){
+
+            if(  $tail < count($visitedProducts) && $tail != 0 ){
+                $visitedProducts = $this->rangeProducts($visitedProducts, $tail);
+            }
+
             $dataProducts = \R::findLike( 'product', ['id' => $visitedProducts] );
             $resProducts = [];
             for($i = 0 ; $i < count($visitedProducts); $i++){

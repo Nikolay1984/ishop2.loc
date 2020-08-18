@@ -25,7 +25,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <body>
 <!--top-header-->
 
-
 <div class="top-header">
     <div class="container">
         <div class="top-header-main">
@@ -169,6 +168,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div>
 </div>
 <!--footer-end-->
+
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/simpleCart.min.js"> </script>
 <script src="/js/jquery.easydropdown.js"></script>
@@ -227,7 +227,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     });
 </script>
-
+<script>
+var symbolLeft = '<?= $curr["symbol_left"]; ?>',
+    symbolRight =  '<?=  $curr["symbol_right"]; ?>';
+</script>
 <script src="/js/main.js"></script>
 
 <!--start-menu-->
