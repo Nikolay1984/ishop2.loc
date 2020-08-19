@@ -94,7 +94,7 @@
                                 <ul>
                                     <li>Color
                                         <select>
-                                            <option >ЦВЕТ НЕ ВЫБРАН</option>
+                                            <option value='0' >ЦВЕТ НЕ ВЫБРАН</option>
 
                                             <?php foreach ($productModifications as $mod): ?>
                                                 <option  data-price = "<?= $mod['price'] * $curr['value'] ?>" value="<?= $mod['id'] ?>"><?= $mod['title'] ?></option>

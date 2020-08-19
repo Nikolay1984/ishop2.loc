@@ -167,6 +167,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
 </div>
+<button id="clearSession">Clear</button>
 <!--footer-end-->
 
 <script src="/js/jquery-1.11.0.min.js"></script>
