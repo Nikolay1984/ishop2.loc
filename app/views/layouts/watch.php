@@ -47,15 +47,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
             </div>
             <div class="col-md-6 top-header-left">
+
+
+
+
                 <div class="cart box_1">
-                    <a href="checkout.html">
+                    <a href="cart/show"  onclick = "getCart();return false;" >
                         <div class="total">
-                            <span class="simpleCart_total"></span></div>
-                        <img src="images/cart-1.png" alt="" />
+                            <img src="images/cart-1.png" alt="" />
+                            <?php if(empty($_SESSION["productsInCart"])) : ?>
+                                <span class="simpleCart_total">Cart is empty</span>
+                            <?php else : ?>
+                                <span class="simpleCart_total"><?= $curr['symbol_left']
+                                    . round($_SESSION['productsInCart.sum'] * $curr['value']).
+                                    $curr['symbol_right']; ?></span>
+                            <?php endif;?>
+
+                        </div>
                     </a>
-                    <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+
                     <div class="clearfix"> </div>
                 </div>
+
+
+
             </div>
             <div class="clearfix"></div>
         </div>
@@ -170,8 +185,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <button id="clearSession">Clear</button>
 <!--footer-end-->
 
+<div class="modal fade" tabindex="-1" role="dialog" id = "cart">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id = "myModalLabel">КОРЗИНА</h4>
+            </div>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+                <a href="cart/view" class="btn btn-primary" type="button">Оформить заказ</a>
+                <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+
+
 <script src="/js/jquery-1.11.0.min.js"></script>
-<script src="/js/simpleCart.min.js"> </script>
+<script src="/js/bootstrap.min.js"></script>
+
+<!--<script src="/js/simpleCart.min.js"> </script>-->
 <script src="/js/jquery.easydropdown.js"></script>
 <script src="/js/imagezoom.js"></script>
 <script defer src="/js/jquery.flexslider.js"></script>

@@ -23,8 +23,8 @@ class CartController extends AppController
                 return false;
             }
             Cart::addProductToCart($product, $modProduct,$quantity);
-            echo "OK";
-            die();
+
+            $this->loadView('cart_modal');
         }else {
             $id = $_GET["id"];
             $quantity = 1;
@@ -49,6 +49,25 @@ class CartController extends AppController
         session_destroy();
         echo "true";
         die();
+    }
+
+    public function showAction(){
+        if(isAJAX()){
+            $this->loadView('cart_modal');
+        }
+        die();
+    }
+    public function deleteAction(){
+        $idDeleteProduct = $_GET["deleteFromCart"];
+        $deleteProduct = $_SESSION['productsInCart'][$idDeleteProduct];
+        $priceDeleteProduct = $deleteProduct['price'];
+        $quantityDeleteProduct = $deleteProduct['quantity'];
+        $deleteSum = $priceDeleteProduct*$quantityDeleteProduct;
+        $_SESSION['productsInCart.quantity'] -= $quantityDeleteProduct;
+        $_SESSION['productsInCart.sum'] -= $deleteSum;
+        unset($_SESSION['productsInCart'][$idDeleteProduct]);
+        $this->loadView('cart_modal');
+
     }
 
 }

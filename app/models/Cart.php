@@ -31,29 +31,25 @@ class Cart extends AppModel
 
     public static function addProductToCart($product,$mod,$quantity){
 
-//        if(!isset($_SESSION['currentCurrency'])){
-//            $_SESSION['currentCurrency'] = App::$app->getProperty('currency');
-//        }
-//        $currencies = App::$app->getProperty("currencies");
-//        debug($currencies,1);
+        $_SESSION['productsInCart.currency'] = App::$app->getProperty("currency");
+
+
 
         $cartProduct = ['quantity'=> 0, 'price'=>$mod['price'],
                         'img'=>$product->img,'name'=>$product->title, 'modName'=>$mod['title'],'alias' => $product->alias];
 
         if(!isset($_SESSION['productsInCart'])){
             $_SESSION['productsInCart'] = [];
-            $_SESSION['productsInCart']['quantity'] = 0;
-            $_SESSION['productsInCart']['sum'] = 0;
+            $_SESSION['productsInCart.quantity'] = 0;
+            $_SESSION['productsInCart.sum'] = 0;
         }
         if(!key_exists($product->id.$mod['title'], $_SESSION['productsInCart'])){
             $_SESSION['productsInCart'][$product->id.$mod['title']] = $cartProduct;
         }
 
         $_SESSION['productsInCart'][$product->id.$mod['title']]['quantity']+=$quantity;
-        $_SESSION['productsInCart']['quantity'] += $quantity;
-        $_SESSION['productsInCart']['sum'] += $quantity * $mod['price'];
+        $_SESSION['productsInCart.quantity'] += $quantity;
+        $_SESSION['productsInCart.sum'] += $quantity * $mod['price'];
 
-
-        debug($_SESSION['productsInCart'],1);
     }
 }

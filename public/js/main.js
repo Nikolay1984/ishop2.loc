@@ -1,3 +1,30 @@
+function showCart(cart){
+
+      $(".modal-body").html(cart);
+      $('#cart').modal();
+      if ("<h3>Корзина пуста</h3>" == $.trim(cart)){
+            $(".simpleCart_total").html("Cart is empty")
+      }else{
+            var data = $("#cart-sum-my").text();
+            $(".simpleCart_total").html(data);
+      }
+      // $(simpleCart_total).html
+
+
+};
+function getCart(){
+
+      $.ajax({
+            type: 'GET',
+            url: '/cart/show',
+            success: function(resp) {
+                  showCart(resp);
+            },
+            error: function() {
+                  console.log("Product not exist");
+            }
+      })
+}
 $('#clearSession').on('click',function () {
 
       $.ajax({
@@ -15,25 +42,48 @@ $('#clearSession').on('click',function () {
 $('body').on('click',".add-to-cart-link",function (e) {
 
       e.preventDefault();
+
       var data = {
             id: this.dataset.id,
-            quantity: $(".quantity input")[0] ? $(".quantity input")[0].value:1 ,
-            mod: $('.available select').find("option").filter(":selected")[0]
-                ? $('.available select').find("option").filter(":selected")[0].value : 0
+            quantity: 1 ,
+            mod: 0
       };
+
       $.ajax({
             type: 'GET',
             url: '/cart/add',
             data: {mod:data},
             success: function(resp) {
-                  console.dir(resp);
+                  showCart(resp);
             },
             error: function() {
-                  console.log("Product not exist");
+                  console.log('product not exist');
             }
       })
 })
 
+$('body').on('click',"#productAdd",function (e) {
+
+      e.preventDefault();
+      var data = {
+            id: this.dataset.id,
+            quantity: $(".quantity input")[0].value ,
+            mod:  $('.available select').find("option").filter(":selected")[0].value
+      };
+
+
+      $.ajax({
+            type: 'GET',
+            url: '/cart/add',
+            data: {mod:data},
+            success: function(resp) {
+                  showCart(resp);
+            },
+            error: function() {
+                  console.log("product not exist");
+            }
+      })
+})
 
 $('#currency').change(function () {
 
@@ -55,4 +105,20 @@ $('.available select').on('change', function () {
       }
 
 
+})
+
+$("#cart").on('click','.del-item', function (e) {
+      var data = $(e.target).data('id');
+      $.ajax({
+            type: 'GET',
+            url: '/cart/delete',
+            data: {deleteFromCart:data},
+            success: function(resp) {
+                  // console.dir(resp);
+                  showCart(resp);
+            },
+            error: function() {
+                  console.log("Product not exist");
+            }
+      })
 })

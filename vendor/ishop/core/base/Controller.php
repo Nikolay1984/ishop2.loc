@@ -36,4 +36,10 @@ abstract class Controller
         $view = new View($this->route, $this->layout, $this->view, $this->meta);
         $view->render($this->date);
     }
+    public function loadView($view,$arrData=[]){
+        extract($arrData);
+        $pathView = VIEWS . "/" . $this->prefix . $this->controller . "/" . $view .".php";
+        require $pathView;
+        die();
+    }
 }
