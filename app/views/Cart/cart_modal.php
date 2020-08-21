@@ -1,5 +1,5 @@
 
-
+<?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 <?php if(!empty($_SESSION['productsInCart'])): ?>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
@@ -19,7 +19,13 @@
                     <td><a href="product/<?=$item['alias'];?>"><?=$item['name'] . " " . $item['modName'];?></td>
                     <td><?=$item['quantity'];?></td>
                     <td><?= round($item['price'] * $_SESSION['productsInCart.currency']['value'])   ;?></td>
-                    <td><span data-id="<?=$id;?>" class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></span></td>
+                    <td>
+
+                        <a href="cart/delete?deleteFromCart=<?=$id;?>" data-id="<?=$id;?>"
+                           class="glyphicon glyphicon-remove text-danger del-item" aria-hidden="true"></a>
+
+
+                    </td>
                 </tr>
             <?php endforeach; ?>
             <tr>

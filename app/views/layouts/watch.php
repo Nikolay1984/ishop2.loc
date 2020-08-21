@@ -106,7 +106,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <div class="col-md-3 header-right">
                 <div class="search-bar">
-                    <input type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                    <input id="input-search" type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
                     <input type="submit" value="">
                 </div>
             </div>
@@ -182,7 +182,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
     </div>
 </div>
-<button id="clearSession">Clear</button>
+
 <!--footer-end-->
 
 <div class="modal fade" tabindex="-1" role="dialog" id = "cart">
@@ -197,8 +197,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+
                 <a href="cart/view" class="btn btn-primary" type="button">Оформить заказ</a>
-                <button type="button" class="btn btn-danger" onclick="clearCart()">Очистить корзину</button>
+                <button id="clearSession" type="button" class="btn btn-danger" ">Очистить корзину</button>
+
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
@@ -270,6 +272,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 var symbolLeft = '<?= $curr["symbol_left"]; ?>',
     symbolRight =  '<?=  $curr["symbol_right"]; ?>';
 </script>
+<script src="/js/typeahead.bundle.js"></script>
 <script src="/js/main.js"></script>
 
 <!--start-menu-->

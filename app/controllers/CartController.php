@@ -26,6 +26,7 @@ class CartController extends AppController
 
             $this->loadView('cart_modal');
         }else {
+
             $id = $_GET["id"];
             $quantity = 1;
             $modId = 0;
@@ -37,36 +38,46 @@ class CartController extends AppController
                 echo "Ошибка get запроса";
                 die();
             }
-            echo "OKKKKKKK";
-            die();
+            Cart::addProductToCart($product, $modProduct,$quantity);
+           redirect();
         }
 
     }
 
     public function clearAction(){
-        $_SESSION = [];
-        unset($_COOKIE[session_name()]);
-        session_destroy();
-        echo "true";
-        die();
+        unset($_SESSION['productsInCart']);
+        unset($_SESSION['productsInCart.quantity']);
+        unset($_SESSION['productsInCart.sum']);
+        unset($_SESSION['productsInCart.currency']);
+        $this->loadView('cart_modal');
     }
 
     public function showAction(){
         if(isAJAX()){
             $this->loadView('cart_modal');
+        }else{
+            $this->setMeta("hockers","escort",'pussy,foxy');
+            $this->view = 'cart_modal';
         }
-        die();
     }
     public function deleteAction(){
-        $idDeleteProduct = $_GET["deleteFromCart"];
-        $deleteProduct = $_SESSION['productsInCart'][$idDeleteProduct];
-        $priceDeleteProduct = $deleteProduct['price'];
-        $quantityDeleteProduct = $deleteProduct['quantity'];
-        $deleteSum = $priceDeleteProduct*$quantityDeleteProduct;
-        $_SESSION['productsInCart.quantity'] -= $quantityDeleteProduct;
-        $_SESSION['productsInCart.sum'] -= $deleteSum;
-        unset($_SESSION['productsInCart'][$idDeleteProduct]);
-        $this->loadView('cart_modal');
+
+        if(isAJAX()){
+            if(Cart::deleteProductFromCart()){
+                $this->loadView('cart_modal');
+            }else{
+                return false;
+            }
+        }else{
+            if(Cart::deleteProductFromCart()){
+                $this->setMeta("hockers","escort",'pussy,foxy');
+                $this->view = 'cart_modal';
+            }else{
+                throw new \Exception("Ошибка сервера",505);
+            }
+
+        }
+
 
     }
 

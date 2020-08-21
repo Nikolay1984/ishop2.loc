@@ -52,4 +52,21 @@ class Cart extends AppModel
         $_SESSION['productsInCart.sum'] += $quantity * $mod['price'];
 
     }
+
+    public static function deleteProductFromCart(){
+        $idDeleteProduct = $_GET["deleteFromCart"];
+        $deleteProduct = $_SESSION['productsInCart'][$idDeleteProduct];
+
+        if(!isset($deleteProduct)){
+            return false;
+        }
+
+        $priceDeleteProduct = $deleteProduct['price'];
+        $quantityDeleteProduct = $deleteProduct['quantity'];
+        $deleteSum = $priceDeleteProduct*$quantityDeleteProduct;
+        $_SESSION['productsInCart.quantity'] -= $quantityDeleteProduct;
+        $_SESSION['productsInCart.sum'] -= $deleteSum;
+        unset($_SESSION['productsInCart'][$idDeleteProduct]);
+        return true;
+    }
 }
