@@ -7,19 +7,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <!DOCTYPE html>
 <html>
 <head>
-   <?=$this->getMeta()?>
+    <?= $this->getMeta() ?>
     <base href="/">
     <link rel="stylesheet" href="/megamenu/css/style.css">
     <link rel="stylesheet" href="/megamenu/css/ionicons.min.css">
-    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <!--jQuery(necessary for Bootstrap's JavaScript plugins)-->
     <!--Custom-Theme-files-->
     <!--theme-style-->
-    <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" />
-    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen"/>
+    <link href="/css/style.css" rel="stylesheet" type="text/css" media="all"/>
     <!--//theme-style-->
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 
 </head>
 <body>
@@ -32,7 +32,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="drop">
                     <div class="box">
                         <select id="currency" tabindex="4" class="dropdown drop">
-                            <?= new \app\widgets\currency\Currency()  ?>
+                            <?= new \app\widgets\currency\Currency() ?>
                         </select>
                     </div>
                     <div class="box1">
@@ -49,26 +49,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="col-md-6 top-header-left">
 
 
-
-
                 <div class="cart box_1">
-                    <a href="cart/show"  onclick = "getCart();return false;" >
+                    <a href="cart/show" onclick="getCart();return false;">
                         <div class="total">
-                            <img src="images/cart-1.png" alt="" />
-                            <?php if(empty($_SESSION["productsInCart"])) : ?>
+                            <img src="images/cart-1.png" alt=""/>
+                            <?php if (empty($_SESSION["productsInCart"])) : ?>
                                 <span class="simpleCart_total">Cart is empty</span>
                             <?php else : ?>
                                 <span class="simpleCart_total"><?= $curr['symbol_left']
-                                    . round($_SESSION['productsInCart.sum'] * $curr['value']).
+                                    . round($_SESSION['productsInCart.sum'] * $curr['value']) .
                                     $curr['symbol_right']; ?></span>
-                            <?php endif;?>
+                            <?php endif; ?>
 
                         </div>
                     </a>
 
-                    <div class="clearfix"> </div>
+                    <div class="clearfix"></div>
                 </div>
-
 
 
             </div>
@@ -90,33 +87,37 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="main-container">
                     <div class="menu">
 
-                <?php  new \app\widgets\menu\Menu([
-                    'class'=>'testMenu',
-                    'attrs'=>[
-                        'style'=>'border:1px solid red;'
-                    ]
-                ]) ?>
+                        <?php new \app\widgets\menu\Menu([
+                            'class' => 'testMenu',
+                            'attrs' => [
+                                'style' => 'border:1px solid red;',
+                            ],
+                        ]) ?>
                     </div>
 
 
                 </div>
 
 
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </div>
             <div class="col-md-3 header-right">
                 <div class="search-bar">
-                    <input id="input-search" type="text" value="Search" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search';}">
+                    <form action="/search" method="get" autocomplete="off">
+
+                    <input id="typeahead" type="text" class="typeahead" name="s">
                     <input type="submit" value="">
+
+                    </form>
                 </div>
             </div>
-            <div class="clearfix"> </div>
+            <div class="clearfix"></div>
         </div>
     </div>
 </div>
 <!--bottom-header-->
 <div class="content">
-    <?=$content ?>
+    <?= $content ?>
 </div>
 
 <!--information-starts-->
@@ -171,12 +172,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="footer-top">
             <div class="col-md-6 footer-left">
                 <form>
-                    <input type="text" value="Enter Your Email" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
+                    <input type="text" value="Enter Your Email" onfocus="this.value = '';"
+                           onblur="if (this.value == '') {this.value = 'Enter Your Email';}">
                     <input type="submit" value="Subscribe">
                 </form>
             </div>
             <div class="col-md-6 footer-right">
-                <p>© 2015 Luxury Watches. All Rights Reserved | Design by  <a href="http://w3layouts.com/" target="_blank">W3layouts</a> </p>
+                <p>© 2015 Luxury Watches. All Rights Reserved | Design by <a href="http://w3layouts.com/"
+                                                                             target="_blank">W3layouts</a></p>
             </div>
             <div class="clearfix"></div>
         </div>
@@ -185,12 +188,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 <!--footer-end-->
 
-<div class="modal fade" tabindex="-1" role="dialog" id = "cart">
+<div class="modal fade" tabindex="-1" role="dialog" id="cart">
     <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id = "myModalLabel">КОРЗИНА</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                </button>
+                <h4 class="modal-title" id="myModalLabel">КОРЗИНА</h4>
             </div>
             <div class="modal-body">
 
@@ -199,13 +203,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
 
                 <a href="cart/view" class="btn btn-primary" type="button">Оформить заказ</a>
-                <button id="clearSession" type="button" class="btn btn-danger" ">Очистить корзину</button>
+                <button id="clearSession" type="button" class="btn btn-danger"
+                ">Очистить корзину</button>
 
             </div>
         </div><!-- /.modal-content -->
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
-
 
 
 <script src="/js/jquery-1.11.0.min.js"></script>
@@ -216,7 +220,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script src="/js/imagezoom.js"></script>
 <script defer src="/js/jquery.flexslider.js"></script>
 <script src="/js/responsiveslides.min.js"></script>
-<script src="/megamenu/js/megamenu.js" ></script>
+<script src="/megamenu/js/megamenu.js"></script>
 <script>
     // You can also use "$(window).load(function() {"
     $(function () {
@@ -239,7 +243,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </script>
 <script>
     // Can also be used with $(document).ready()
-    $(window).load(function() {
+    $(window).load(function () {
         $('.flexslider').flexslider({
             animation: "slide",
             controlNav: "thumbnails"
@@ -247,36 +251,35 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     });
 </script>
 <script type="text/javascript">
-    $(function() {
+    $(function () {
 
         var menu_ul = $('.menu_drop > li > ul'),
-            menu_a  = $('.menu_drop > li > a');
+            menu_a = $('.menu_drop > li > a');
 
         menu_ul.hide();
 
-        menu_a.click(function(e) {
+        menu_a.click(function (e) {
             e.preventDefault();
-            if(!$(this).hasClass('active')) {
+            if (!$(this).hasClass('active')) {
                 menu_a.removeClass('active');
                 menu_ul.filter(':visible').slideUp('normal');
-                $(this).addClass('active').next().stop(true,true).slideDown('normal');
+                $(this).addClass('active').next().stop(true, true).slideDown('normal');
             } else {
                 $(this).removeClass('active');
-                $(this).next().stop(true,true).slideUp('normal');
+                $(this).next().stop(true, true).slideUp('normal');
             }
         });
 
     });
 </script>
 <script>
-var symbolLeft = '<?= $curr["symbol_left"]; ?>',
-    symbolRight =  '<?=  $curr["symbol_right"]; ?>';
+    var symbolLeft = '<?= $curr["symbol_left"]; ?>',
+        symbolRight = '<?=  $curr["symbol_right"]; ?>';
 </script>
 <script src="/js/typeahead.bundle.js"></script>
 <script src="/js/main.js"></script>
 
 <!--start-menu-->
-
 
 
 <!--dropdown-->
