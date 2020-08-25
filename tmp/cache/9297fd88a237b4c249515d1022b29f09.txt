@@ -1,22 +1,22 @@
-a:2:{s:4:"data";s:1435:"
+a:2:{s:4:"data";s:1590:"
     <li>
-        <a href="?id = 1">   Men</a>
+        <a href="/category/men">   Men</a>
 
                 <ul>
             
     <li>
-        <a href="?id = 4">   Электронные</a>
+        <a href="/category/elektronnye">   Электронные</a>
 
                 <ul>
             
     <li>
-        <a href="?id = 6">   Casio</a>
+        <a href="/category/casio">   Casio</a>
 
         
     </li>
 
     <li>
-        <a href="?id = 7">   Citizen</a>
+        <a href="/category/citizen">   Citizen</a>
 
         
     </li>
@@ -25,60 +25,24 @@ a:2:{s:4:"data";s:1435:"
     </li>
 
     <li>
-        <a href="?id = 5">   Механические</a>
+        <a href="/category/mehanicheskie">   Механические</a>
 
                 <ul>
             
     <li>
-        <a href="?id = 8">   Royal London</a>
+        <a href="/category/royal-london">   Royal London</a>
 
         
     </li>
 
     <li>
-        <a href="?id = 9">   Seiko</a>
+        <a href="/category/seiko">   Seiko</a>
 
         
     </li>
 
     <li>
-        <a href="?id = 10">   Epos</a>
-
-        
-    </li>
-        </ul>
-        
-    </li>
-        </ul>
-        
-    </li>
-
-    <li>
-        <a href="?id = 2">   Women</a>
-
-                <ul>
-            
-    <li>
-        <a href="?id = 11">   Электронные</a>
-
-                <ul>
-            
-    <li>
-        <a href="?id = 13">   Adriatica</a>
-
-        
-    </li>
-        </ul>
-        
-    </li>
-
-    <li>
-        <a href="?id = 12">   Механические</a>
-
-                <ul>
-            
-    <li>
-        <a href="?id = 14">   Anne Klein</a>
+        <a href="/category/epos">   Epos</a>
 
         
     </li>
@@ -90,8 +54,44 @@ a:2:{s:4:"data";s:1435:"
     </li>
 
     <li>
-        <a href="?id = 3">   Kids</a>
+        <a href="/category/women">   Women</a>
+
+                <ul>
+            
+    <li>
+        <a href="/category/elektronnye-11">   Электронные</a>
+
+                <ul>
+            
+    <li>
+        <a href="/category/adriatica">   Adriatica</a>
 
         
     </li>
-";s:8:"time_end";i:1598272168;}
+        </ul>
+        
+    </li>
+
+    <li>
+        <a href="/category/mehanicheskie-12">   Механические</a>
+
+                <ul>
+            
+    <li>
+        <a href="/category/anne-klein">   Anne Klein</a>
+
+        
+    </li>
+        </ul>
+        
+    </li>
+        </ul>
+        
+    </li>
+
+    <li>
+        <a href="/category/kids">   Kids</a>
+
+        
+    </li>
+";s:8:"time_end";i:1598359014;}

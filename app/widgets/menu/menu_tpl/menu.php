@@ -1,7 +1,7 @@
 <?php $parent = isset($category['childs']) ?>
 
     <li>
-        <a href="?id = <?= $id ?>"> <?= $tab?>  <?= $category['title'] ?></a>
+        <a href="/category/<?= $category['alias'] ?>"> <?= $tab?>  <?= $category['title'] ?></a>
 
         <?php if(isset($category['childs'])): ?>
         <ul>

@@ -4,6 +4,8 @@
 namespace app\controllers;
 
 
+use ishop\BreadcrumbsRender;
+
 class SearchController extends AppController
 {
     public function indexAction(){
@@ -15,8 +17,10 @@ class SearchController extends AppController
             }else{
                 $searchProducts = null;
             }
+            $breadCrumbs = BreadcrumbsRender::getBreadcrumbs("home",$query,"viewSearch");
+
             $this->setMeta("res of search","xujli majli",'pussy,foxy');
-            $this->set(compact('searchProducts',"query"));
+            $this->set(compact('searchProducts',"query", "breadCrumbs"));
 
     }
 

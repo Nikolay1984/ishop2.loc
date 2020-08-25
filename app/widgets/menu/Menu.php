@@ -42,6 +42,7 @@ class Menu
         $this->menuHtml = $cache->get($this->cacheKey);
         if(!$this->menuHtml){
             $this->data = App::$app->getProperty("cats");
+
             if(!$this->data){
                 $this->data = \R::getAssoc('SELECT * FROM {$this->table}');
             }

@@ -6,6 +6,7 @@ namespace app\controllers;
 
 use app\models\BreadCrumbs;
 use app\models\Product;
+use ishop\BreadcrumbsRender;
 
 class ProductController extends AppController
 {
@@ -31,11 +32,14 @@ related_product.product_id = ? ",[$product["id"]]);
         $productModelInst = new Product();
         $visitedProducts = $productModelInst->getDataProducts(3);
         $productModelInst->setProductId($product["id"]);
-        $breadCrumbs = array_reverse(BreadCrumbs::getBreadCrumbs($product["category_id"], $product["title"]));
+
+        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs($product["category_id"],$product["title"]);
+
+//        $breadCrumbs = array_reverse(BreadCrumbs::getBreadCrumbs($product["category_id"], $product["title"]));
         
         $productModifications = \R::findAll("modification", "product_id = ?", [$product['id']]);
 
-//debug($productModifications,1);
+
 
 
         $this->set(compact('product', "related", "gallery","visitedProducts","breadCrumbs","productModifications"));

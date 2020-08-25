@@ -16,13 +16,9 @@ class BreadCrumbs
             self::$arrRes[] = ["title"=>$title];
         }
 
-
         $category = App::$app->getProperty("cats");
-
         $upProduct = $category[$id];
         self::$arrRes[] = ['title'=>$upProduct['title'],'alias'=>$upProduct['alias']];
-
-
 
         $parentId = $upProduct['parent_id'];
         if($parentId){

@@ -1,14 +1,13 @@
 <!--start-breadcrumbs-->
 <?= $breadCrumbs ?>
 <!--end-breadcrumbs-->
-
-<?php if($searchProducts): ?>
+<?php if($arrCategoryProducts): ?>
     <?php $curr = \ishop\App::$app->getProperty('currency'); ?>
     <div class="product">
         <div class="container">
             <div class="product-top">
                 <div class="product-one">
-                    <?php foreach ($searchProducts as $product): ?>
+                    <?php foreach ($arrCategoryProducts as $product): ?>
                         <div class="col-md-3 product-left">
                             <div class="product-main simpleCart_shelfItem">
                                 <a href="/product/<?= $product->alias ?>" class="mask"><img class="img-responsive zoom-img" src="/images/<?= $product->img ?>" alt="<?= $product->title ?>" /></a>
@@ -42,7 +41,9 @@
         </div>
     </div>
 <?php else: ?>
-<div class="container">
-    <p>Простите, ничего не найдено!</p>
+    <div class="container">
+    <p>Простите, данная категория пуста!</p>
     </div>
 <?php endif; ?>
+
+<?= $htmlPagination ?>
