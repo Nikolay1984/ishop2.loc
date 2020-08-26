@@ -35,13 +35,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <?= new \app\widgets\currency\Currency() ?>
                         </select>
                     </div>
-                    <div class="box1">
-                        <select tabindex="4" class="dropdown">
-                            <option value="" class="label">English :</option>
-                            <option value="1">English</option>
-                            <option value="2">French</option>
-                            <option value="3">German</option>
-                        </select>
+                    <div class="btn-group">
+
+                        <a  class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <?php if(isset($_SESSION['user'])): ?>
+                                <li><a href="">Добро пожаловать <?= $_SESSION['user']['name'] ?></a></li>
+                                <li><a href="/user/logout">Logout</a></li>
+                            <?php else: ?>
+                                <li><a href="/user/login">Login</a></li>
+                                <li><a href="/user/signup">Sign up</a></li>
+                            <?php endif; ?>
+                        </ul>
                     </div>
                     <div class="clearfix"></div>
                 </div>
@@ -221,6 +226,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <script defer src="/js/jquery.flexslider.js"></script>
 <script src="/js/responsiveslides.min.js"></script>
 <script src="/megamenu/js/megamenu.js"></script>
+<script src="/js/valid_BP.js"></script>
 <script>
     // You can also use "$(window).load(function() {"
     $(function () {

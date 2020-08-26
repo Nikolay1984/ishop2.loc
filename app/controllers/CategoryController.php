@@ -14,6 +14,8 @@ class CategoryController extends AppController
 {
 
     public function indexAction(){
+
+
         $arrCategoryProducts = [];
         $recursCategory = function ($idCat) use (&$arrCategoryProducts, &$recursCategory){
             $podCategory = \R::find("category",'parent_id = ?', [$idCat] );
@@ -40,7 +42,8 @@ class CategoryController extends AppController
 
         $breadCrumbs = BreadcrumbsRender::getBreadcrumbs($idAlias);
 
-        $arrCategoryProducts = Pagination::getCurrentProducts($arrCategoryProducts);
+
+        $arrCategoryProducts = Pagination::getCurrentProducts($arrCategoryProducts,App::$app->getProperty("pagination"));
         $htmlPagination = Pagination::getHtmlPagination();
 
         $this->setMeta("category:{$alias}","escort",'pussy,foxy');

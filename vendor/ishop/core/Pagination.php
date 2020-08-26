@@ -6,29 +6,72 @@ namespace ishop;
 
 class Pagination
 {
-    static public $countProducts;
-    static public $uri = "contoroller";
-    static public $allProducts;
-    static public $countPages;
-    
+    static private $viewCountProducts;
+    static private $uri;
+    static private $allProducts = null;
+    static private $countPages;
+    static private $currentPage;
 
-    static public function getCurrentProducts($allProducts,$countProducts = 8){
-        self::$countProducts = $countProducts;
-        self::$allProducts = $allProducts;
-        $countPages = ceil(count($allProducts)/$countProducts); 
-        
-        if(!isset($_COOKIE['posPagination'])){
-            setcookie('posPagination','1',time()+3600);
-            $_COOKIE['posPagination'] = '1';
+
+    static  private  function correctCurrentNumberPage($currentNumberPage){
+        if($currentNumberPage < 1){
+            return 1;
         }
+        if($currentNumberPage > self::$countPages){
+            return self::$countPages;
+        }
+        return $currentNumberPage;
 
-        $arrStart = self::$countProducts * (int)$_COOKIE['posPagination'] - self::$countProducts;
-        return array_slice($allProducts,$arrStart,self::$countProducts);
+    }
+    static private function startPagination($allProducts,$viewCountProducts){
+        self::$viewCountProducts = $viewCountProducts;
+        self::$allProducts = $allProducts;
+        self::$countPages = ceil(count($allProducts)/$viewCountProducts);
+        self::$uri = self::getUri();
+        self::$currentPage = self::correctCurrentNumberPage(self::getCurrentPage());
+    }
+    static private function getUri(){
+        $url = $_SERVER["REQUEST_URI"];
+        $url  = explode("?", $url);
+        $uri = $url[0] . "?";
+        $arrParam  = @explode("&", $url[1]);
 
+        foreach ($arrParam as $param){
+            if(!preg_match("#page=#", $param) && $param != "" ){
+                $uri = $uri . $param . "&amp;";
+            }
+        }
+//        debug($uri,1);
+
+        return $uri;
+    }
+    static private function getCurrentPage(){
+        if(!isset($_GET['page'])){
+            return 1;
+        }
+        return $_GET['page'];
+
+    }
+
+    static public function getCurrentProducts($allProducts,$viewCountProducts = 8){
+
+        if(!$allProducts){
+            return "";
+        }
+        self::startPagination($allProducts,$viewCountProducts);
+
+        $arrStart = self::$viewCountProducts * self::$currentPage - self::$viewCountProducts;
+        return array_slice($allProducts,$arrStart,self::$viewCountProducts);
     }
 
 
     static public function getHtmlPagination(){
+//        debug(self::$allProducts);
+
+        if(!isset(self::$allProducts)){
+            return "";
+        }
+
         $back = null;
         $forward = null;
         $startpage = null;
@@ -37,16 +80,17 @@ class Pagination
         $page1left= null;
         $page2right= null;
         $page1right= null;
-        $currentPage= $_COOKIE['posPagination'];
+        $currentPage= self::$currentPage;
         $uri = self::$uri;
         $countPages = self::$countPages;
-        
+
+
         if($currentPage > 1){
             $back = "<li><a class='nav-link' href='{$uri}page=" .($currentPage - 1)."'>&lt;</a></li>";
         }
 
         if($currentPage < $countPages){
-            $forward = "<li><a class='nav-link' href='{$uri}page=" .($currentPage + 1)."'>&lt;</a></li>";
+            $forward = "<li><a class='nav-link' href='{$uri}page=" .($currentPage + 1)."'>&gt;</a></li>";
         }
 
         if($currentPage > 3){
@@ -77,8 +121,8 @@ class Pagination
                 ($currentPage + 2)."'>". ($currentPage + 2) . "</a></li>";
         }
 
-        return '<ul class = "pagination">' .$startpage.$back.$page2left.$page1left.'<li class="active"><li>'.$currentPage
-            . '<a/></li>' . $page1right.$page2right.$forward.$endpage.'</ul>';
+        return '<ul class = "pagination">' .$startpage.$back.$page2left.$page1left."<li class='active'><a class='nav-link'>$currentPage</a><li>"
+             . $page1right.$page2right.$forward.$endpage.'</ul>';
 
     }
 

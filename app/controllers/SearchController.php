@@ -4,7 +4,9 @@
 namespace app\controllers;
 
 
+use ishop\App;
 use ishop\BreadcrumbsRender;
+use ishop\Pagination;
 
 class SearchController extends AppController
 {
@@ -15,12 +17,15 @@ class SearchController extends AppController
             if(isset($query)){
                 $searchProducts = \R::find("product", "title LIKE ?", ["%{$query}%"]);
             }else{
-                $searchProducts = null;
+                $searchProducts = [];
             }
             $breadCrumbs = BreadcrumbsRender::getBreadcrumbs("home",$query,"viewSearch");
 
+            $searchProducts = Pagination::getCurrentProducts($searchProducts,App::$app->getProperty("pagination"));
+            $htmlPagination = Pagination::getHtmlPagination();
+
             $this->setMeta("res of search","xujli majli",'pussy,foxy');
-            $this->set(compact('searchProducts',"query", "breadCrumbs"));
+            $this->set(compact('searchProducts',"query", "breadCrumbs", 'htmlPagination'));
 
     }
 

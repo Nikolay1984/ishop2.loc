@@ -46,3 +46,8 @@
     <p>Простите, ничего не найдено!</p>
     </div>
 <?php endif; ?>
+
+
+<div class="text-center">
+    <?= $htmlPagination ?>
+</div>

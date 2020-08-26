@@ -45,5 +45,6 @@
     <p>Простите, данная категория пуста!</p>
     </div>
 <?php endif; ?>
-
+<div class="text-center">
 <?= $htmlPagination ?>
+</div>
