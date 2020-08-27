@@ -4,6 +4,13 @@ Author URL: http://w3layouts.com
 License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 -->
+<?php if (!isset( $_SESSION['productsInCart.currency'])){
+        $curr = \ishop\App::$app->getProperty("currency");
+
+} else{
+    $curr = $_SESSION['productsInCart.currency'];
+};
+     ?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -122,6 +129,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 </div>
 <!--bottom-header-->
 <div class="content">
+    <?php if(isset($_SESSION['errors'])):?>
+        <div class="container">
+            <?php echo $_SESSION['errors']; unset($_SESSION['errors']); ?>
+        </div>
+    <? endif; ?>
+    <?php if(isset($_SESSION['success'])):?>
+        <div class="container">
+            <?php echo $_SESSION['success']; unset($_SESSION['success']); ?>
+        </div>
+    <? endif; ?>
     <?= $content ?>
 </div>
 

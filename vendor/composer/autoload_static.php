@@ -15,6 +15,10 @@ class ComposerStaticInit3b058c3071b0e4708dee37a4a63610fc
         array (
             'app\\' => 4,
         ),
+        'V' => 
+        array (
+            'Valitron\\' => 9,
+        ),
     );
 
     public static $prefixDirsPsr4 = array (
@@ -25,6 +29,10 @@ class ComposerStaticInit3b058c3071b0e4708dee37a4a63610fc
         'app\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app',
+        ),
+        'Valitron\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/vlucas/valitron/src/Valitron',
         ),
     );
 

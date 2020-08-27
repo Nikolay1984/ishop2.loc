@@ -75,6 +75,7 @@ function getCart(){
             }
       })
 }
+
 $('#clearSession').on('click',function () {
 
       $.ajax({
@@ -138,6 +139,7 @@ $('body').on('click',"#productAdd",function (e) {
 $('#currency').change(function () {
 
       window.location ="currency/change?curr=" + $(this).val();
+
 });
 
 $('.available select').on('change', function () {
