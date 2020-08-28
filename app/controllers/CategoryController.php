@@ -40,7 +40,7 @@ class CategoryController extends AppController
         $idAlias = $category->id;
         $recursCategory($idAlias);
 
-        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs($idAlias);
+        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs($idAlias,"","view");
 
 
         $arrCategoryProducts = Pagination::getCurrentProducts($arrCategoryProducts,App::$app->getProperty("pagination"));

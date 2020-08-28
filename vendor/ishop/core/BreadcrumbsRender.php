@@ -7,7 +7,7 @@ use app\models\BreadCrumbs;
 
 class BreadcrumbsRender
 {
-        static public function getBreadcrumbs($id='home',$title='',$view='view'){
+        static public function getBreadcrumbs($id='home',$title='',$view='default'){
 
             if($id!='home'){
                 $breadCrumbs = array_reverse(BreadCrumbs::getBreadCrumbs($id,$title));

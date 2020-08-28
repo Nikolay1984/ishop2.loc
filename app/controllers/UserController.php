@@ -12,10 +12,26 @@ class UserController extends AppController
 {
 
     public function loginAction(){
-        if(isset($_POST['user'])){
-            debug($_POST,1);
+
+        if(!empty($_POST['user']['login']) && !empty($_POST['user']['password'])){
+
+            $modUser = new User();
+
+            if($modUser->login()){
+                $_SESSION["success"] = "Вход выполнен успешно";
+                redirect('/');
+            }
+
+            $_SESSION["errors"] = "Введеный логин или пароль не верны";
+            redirect();
+
+
         }
-        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs('home','login','viewLogAndReg');
+
+
+
+
+        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs('home','login');
         $this->set(compact('breadCrumbs'));
 
     }
@@ -34,6 +50,12 @@ class UserController extends AppController
                     PASSWORD_DEFAULT);
                 if($instModel->saveInBD("user")){
                     $_SESSION['success'] = "Регистрация прошла успешна!";
+                    foreach ($data as $key=>$value){
+                        if($key != "password"){
+                            $_SESSION["user"][$key] = $value;
+                        }
+                    }
+                    redirect('/');
                 }else{
                     $_SESSION['errors'] = "Бд временно не доступна";
                 }
@@ -41,11 +63,18 @@ class UserController extends AppController
             }
             redirect();
 
-        }
-        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs('home','signup','viewLogAndReg');
+            }
+
+        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs('home','signup');
         $this->set(compact('breadCrumbs'));
     }
     public function logoutAction(){
+        $name = $_SESSION['user']['name'];
+
+        unset($_SESSION['user']);
+        $_SESSION['success'] = "Пользователь $name вышел из аккаунта";
+
+        redirect();
 
     }
 

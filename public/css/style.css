@@ -3071,7 +3071,7 @@ ul.tag-men {
 		margin-bottom: 20px;
 }
 
-#cart img{
+#cart img, .cart-order img{
 	height: 50px;
 }
 .del-item{

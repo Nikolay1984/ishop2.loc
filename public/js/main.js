@@ -27,22 +27,6 @@ $('#typeahead').bind('typeahead:select', function(ev, suggestion) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function showCart(cart){
 
       $(".modal-body").html(cart);
@@ -175,6 +159,27 @@ $("#cart").on('click','.del-item', function (e) {
             }
       })
 })
+$(".cart-order").on('click','.del-item', function (e) {
+      var data = $(e.target).data('id');
+      e.preventDefault();
+      $.ajax({
+            type: 'GET',
+            url: '/cart/delete',
+            data: {deleteFromCart:data},
+            success: function(resp) {
+                  $(".table-responsive").html(resp);
 
 
+
+                  if(resp.trim() == "<h3>Корзина пуста</h3>"){
+                        console.log('resp');
+                        $(".cart-note").remove();
+                  }
+
+            },
+            error: function() {
+                  console.log("Product not exist");
+            }
+      })
+})
 

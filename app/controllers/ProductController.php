@@ -33,7 +33,7 @@ related_product.product_id = ? ",[$product["id"]]);
         $visitedProducts = $productModelInst->getDataProducts(3);
         $productModelInst->setProductId($product["id"]);
 
-        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs($product["category_id"],$product["title"]);
+        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs($product["category_id"],$product["title"],"view");
 
 //        $breadCrumbs = array_reverse(BreadCrumbs::getBreadCrumbs($product["category_id"], $product["title"]));
         

@@ -5,6 +5,8 @@ namespace app\controllers;
 
 
 use app\models\Cart;
+use app\models\User;
+use ishop\BreadcrumbsRender;
 
 class CartController extends AppController
 {
@@ -70,6 +72,7 @@ class CartController extends AppController
             }
         }else{
             if(Cart::deleteProductFromCart()){
+
                 $this->setMeta("hockers","escort",'pussy,foxy');
                 $this->view = 'cart_modal';
             }else{
@@ -80,5 +83,60 @@ class CartController extends AppController
 
 
     }
+
+
+    public function viewAction(){
+        $this->setMeta("hockers","escort",'pussy,foxy');
+        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs("home","КОРЗИНА");
+        $this->set(compact('breadCrumbs'));
+    }
+    public function checkoutAction(){
+
+        if($_POST){
+
+            if(!isset($_SESSION["user"])){
+                if(isset($_POST['user'])){
+                    $instModel = new User();
+                    $data = $_POST['user'];
+                    $instModel->load($data);
+
+                    if(!$instModel->validate($data) || !$instModel->checkUniq()){
+                        $_SESSION['formData'] = $data;
+                        $instModel->setSessionErrors();
+                        redirect();
+
+                    }else{
+                        $instModel->attributes['password'] = password_hash($instModel->attributes['password'],
+                            PASSWORD_DEFAULT);
+                        if($user_id = $instModel->saveInBD("user")){
+                            $_SESSION['success'] = "Регистрация прошла успешна!";
+                            foreach ($data as $key=>$value){
+                                if($key != "password"){
+                                    $_SESSION["user"][$key] = $value;
+                                }
+                            }
+
+                        }else{
+                            $_SESSION['errors'] = "Бд временно не доступна";
+                            redirect();
+                        }
+
+                    }
+
+
+                }
+            }
+            $data['id'] = isset($_SESSION["user"]['id']) ? $_SESSION["user"]['id'] : $user_id;
+            $data['note'] = isset($_POST['note']) ? $_POST['note'] : "";
+            //TODO
+            debug($data,1);
+        }
+
+
+
+        }
+
+
+
 
 }

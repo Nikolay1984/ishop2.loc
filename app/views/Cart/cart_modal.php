@@ -1,9 +1,6 @@
 
 <?php $curr = \ishop\App::$app->getProperty('currency'); ?>
 
-<?php //debug($_SESSION['productsInCart.currency']); ?>
-<?php //debug($curr,1); ?>
-
 <?php if(!empty($_SESSION['productsInCart'])): ?>
     <div class="table-responsive">
         <table class="table table-hover table-striped">
@@ -46,5 +43,5 @@
         </table>
     </div>
 <?php else: ?>
-    <h3>Корзина пуста</h3>
+<?php $cartEmpty = '<h3>Корзина пуста</h3>'; echo $cartEmpty?>
 <?php endif; ?>
