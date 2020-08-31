@@ -4108,3 +4108,77 @@
 =============================
 [2020-08-28 14:53:30] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
 =============================
+[2020-08-31 07:36:52] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 08:40:31] : Сообщение: view C:\OpenServer\domains\ishop2.loc/app/views/cart/checkout.php is not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\base\View.php; Строка: 48!
+=============================
+[2020-08-31 08:40:58] : Сообщение: view C:\OpenServer\domains\ishop2.loc/app/views/cart/checkout.php is not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\base\View.php; Строка: 48!
+=============================
+[2020-08-31 08:41:33] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 08:41:46] : Сообщение: view C:\OpenServer\domains\ishop2.loc/app/views/cart/checkout.php is not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\base\View.php; Строка: 48!
+=============================
+[2020-08-31 08:41:46] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 08:42:04] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 08:42:25] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 08:43:52] : Сообщение: view C:\OpenServer\domains\ishop2.loc/app/views/cart/checkout.php is not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\base\View.php; Строка: 48!
+=============================
+[2020-08-31 08:43:53] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 08:44:22] : Сообщение: view C:\OpenServer\domains\ishop2.loc/app/views/cart/checkout.php is not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\base\View.php; Строка: 48!
+=============================
+[2020-08-31 08:45:15] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 08:52:33] : Сообщение: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-08-31 08:53:49] : Сообщение: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-08-31 09:44:18] : Сообщение: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-08-31 09:44:18] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 09:44:28] : Сообщение: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-08-31 09:45:16] : Сообщение: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-08-31 09:48:32] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 09:49:29] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 09:52:53] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 09:53:26] : Сообщение: view C:\OpenServer\domains\ishop2.loc/app/views/cart/checkout.php is not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\base\View.php; Строка: 48!
+=============================
+[2020-08-31 09:53:26] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 09:56:10] : Сообщение: view C:\OpenServer\domains\ishop2.loc/app/views/cart/checkout.php is not found; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\base\View.php; Строка: 48!
+=============================
+[2020-08-31 12:03:55] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 12:21:25] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 12:21:29] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 12:28:05] : Сообщение: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'London 41040-01,90),(7,1,1,Casio MRP-700-1AVEF,300)' at line 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-08-31 12:30:32] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 12:43:33] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 14:11:04] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 14:26:02] : Сообщение: Failed to authenticate on SMTP server with username "ishopstaffornikolay@ukr.net" using 2 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535 Incorrect authentication data
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535 Incorrect authentication data
+".; Файл: C:\OpenServer\domains\ishop2.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php; Строка: 191!
+=============================
+[2020-08-31 14:26:21] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================
+[2020-08-31 14:35:15] : Сообщение: Failed to authenticate on SMTP server with username "ishopstaffornikolay@ukr.net" using 2 possible authenticators. Authenticator LOGIN returned Expected response code 235 but got code "535", with message "535 Incorrect authentication data
+". Authenticator PLAIN returned Expected response code 235 but got code "535", with message "535 Incorrect authentication data
+".; Файл: C:\OpenServer\domains\ishop2.loc\vendor\swiftmailer\swiftmailer\lib\classes\Swift\Transport\Esmtp\AuthHandler.php; Строка: 191!
+=============================
+[2020-08-31 14:38:51] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 40!
+=============================

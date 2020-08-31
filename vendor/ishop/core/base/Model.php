@@ -21,6 +21,7 @@ abstract class Model
 
 
     public function load($data){
+
         foreach ($this->attributes as $key=>$val){
             if(isset($data[$key])){
                 $this->attributes[$key] =$data[$key];
@@ -56,6 +57,7 @@ abstract class Model
 
     public function saveInBD($table){
         $tbl = \R::dispense($table);
+
         foreach ($this->attributes as $key=>$value){
             $tbl->$key = $value;
         }

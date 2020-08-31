@@ -9,12 +9,12 @@
             <?php if(!isset($_SESSION['user'])): ?>
                 <div class="form-group has-feedback">
                     <label for="login">Login</label>
-                    <input type="text" name="user[login]" class="form-control" id="login" placeholder="Login" value="<?= isset($_SESSION['form_data']['login']) ? $_SESSION['form_data']['login'] : '' ?>" required>
+                    <input type="text" name="user[login]" class="form-control" id="login" placeholder="Login" autocomplete="username" value="<?= isset($_SESSION['form_data']['login']) ? $_SESSION['form_data']['login'] : '' ?>" required>
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                 </div>
                 <div class="form-group has-feedback">
                     <label for="pasword">Password</label>
-                    <input type="password" name="user[password]" class="form-control" id="pasword" placeholder="Password" value="<?= isset($_SESSION['form_data']['password']) ? $_SESSION['form_data']['password'] : '' ?>" data-minlength="6" data-error="Пароль должен включать не менее 6 символов" required>
+                    <input type="password" name="user[password]" class="form-control" id="pasword" placeholder="Password" autocomplete="current-password" value="<?= isset($_SESSION['form_data']['password']) ? $_SESSION['form_data']['password'] : '' ?>" data-minlength="6" data-error="Пароль должен включать не менее 6 символов" required>
                     <span class="glyphicon form-control-feedback" aria-hidden="true"></span>
                     <div class="help-block with-errors"></div>
                 </div>

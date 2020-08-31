@@ -48,8 +48,9 @@ class UserController extends AppController
             }else{
                 $instModel->attributes['password'] = password_hash($instModel->attributes['password'],
                     PASSWORD_DEFAULT);
-                if($instModel->saveInBD("user")){
+                if($user_id = $instModel->saveInBD("user")){
                     $_SESSION['success'] = "Регистрация прошла успешна!";
+                    $data['id'] = $user_id ;
                     foreach ($data as $key=>$value){
                         if($key != "password"){
                             $_SESSION["user"][$key] = $value;

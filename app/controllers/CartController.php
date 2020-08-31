@@ -5,6 +5,7 @@ namespace app\controllers;
 
 
 use app\models\Cart;
+use app\models\Order;
 use app\models\User;
 use ishop\BreadcrumbsRender;
 
@@ -126,15 +127,22 @@ class CartController extends AppController
 
                 }
             }
-            $data['id'] = isset($_SESSION["user"]['id']) ? $_SESSION["user"]['id'] : $user_id;
+            $data['user_id'] = isset($_SESSION["user"]['id']) ? $_SESSION["user"]['id'] : $user_id;
             $data['note'] = isset($_POST['note']) ? $_POST['note'] : "";
-            //TODO
-            debug($data,1);
+            $data['currency'] = $_SESSION['productsInCart.currency']['code'];
+
+            $user_email = isset($_SESSION["user"]['email']) ? $_SESSION["user"]['email'] : $_POST["user"]['email'];
+
+            $order_id = Order::saveOrder($data);
+
+            Order::orderEmail($order_id, $user_email);
+
         }
+        redirect();
 
 
 
-        }
+    }
 
 
 
