@@ -233,6 +233,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<div class="preloader"><img src="images/ring.svg" alt=""></div>
+
+
 
 <script src="/js/jquery-1.11.0.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>

@@ -5,7 +5,7 @@
     <?php $curr = \ishop\App::$app->getProperty('currency'); ?>
     <div class="product">
         <div class="container">
-            <div class="product-top">
+            <div class="product-top single-main-left">
                 <div class="product-one">
                     <?php foreach ($arrCategoryProducts as $product): ?>
                         <div class="col-md-3 product-left">
@@ -35,9 +35,14 @@
                             </div>
                         </div>
                     <?php endforeach; ?>
+                    <div class="col-md-3 single-right">
+                        <?php new \app\widgets\filter\Filter() ?>
+
+                    </div>
                     <div class="clearfix"></div>
                 </div>
             </div>
+
         </div>
     </div>
 <?php else: ?>
