@@ -183,3 +183,55 @@ $(".cart-order").on('click','.del-item', function (e) {
       })
 })
 
+$("body").on('change', '.w_sidebar input', function (e) {
+
+      let arrCheckedInput  = $('.w_sidebar input:checked');
+      let data = '';
+      arrCheckedInput.each(function () {
+            data += this.value + ",";
+      });
+
+      if(data){
+            $.ajax({
+                  type: 'GET',
+                  url: location.href,
+                  data: {filter:data},
+                  beforeSend:function(){
+                        $(".preloader").fadeIn(300,function () {
+                              $('.product-one').hide();
+
+                        });
+                  },
+                  success: function(resp) {
+                        $(".preloader").fadeOut(500,function () {
+                              history.pushState(resp,1);
+                              $('.product-one').html(resp).fadeIn();
+                              let str = location.search.replace(/f(.+?)($|&)/g,'');
+                              console.log(str);
+                        });
+                  },
+                  error: function() {
+                        console.log("Product not exist");
+                  }
+            });
+
+
+      }else {
+
+            window.location =  window.location.pathname;
+      }
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+

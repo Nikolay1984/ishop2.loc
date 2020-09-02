@@ -40,11 +40,23 @@ class CategoryController extends AppController
         $idAlias = $category->id;
         $recursCategory($idAlias);
 
+
+
         $breadCrumbs = BreadcrumbsRender::getBreadcrumbs($idAlias,"","view");
 
 
         $arrCategoryProducts = Pagination::getCurrentProducts($arrCategoryProducts,App::$app->getProperty("pagination"));
         $htmlPagination = Pagination::getHtmlPagination();
+
+        if(isAJAX()){
+            // TODO
+//            $filter = trim($_GET['filter'],",");
+//            $filter = explode(',', $filter);
+//            $arrProductsId = \R::findAll('product', 'WHERE id = SELECT attribute_product attr_id = 2');
+//            debug($arrProductsId);
+//            die();
+
+        }
 
         $this->setMeta("category:{$alias}","escort",'pussy,foxy');
         $this->set(compact('arrCategoryProducts','breadCrumbs','htmlPagination'));
