@@ -24,6 +24,7 @@ class Router
 
             if(class_exists($controller)){
                 $instController = new $controller(self::$route);
+
                 $action = self::lowerCamelCase( self::$route["action"]."Action");
 
                 if(method_exists($instController,  $action)){

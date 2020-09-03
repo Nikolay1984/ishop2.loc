@@ -42,6 +42,7 @@ class User extends AppModel
         }
 
         public function login($isAdmin = false){
+
             $login =  $_POST['user']['login'] ;
             $password =  $_POST['user']['password'] ;
 
@@ -71,6 +72,11 @@ class User extends AppModel
 
 
 
+        }
+
+        public static function isAdmin(){
+//            debug($_SESSION["user"],1);
+            return (isset($_SESSION["user"]) && $_SESSION["user"]['role'] == "admin" );
         }
 
 

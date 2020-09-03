@@ -39,6 +39,8 @@ class UserController extends AppController
         if(isset($_POST['user'])){
             $instModel = new User();
             $data = $_POST['user'];
+
+
             $instModel->load($data);
 
             if(!$instModel->validate($data) || !$instModel->checkUniq()){
@@ -51,6 +53,7 @@ class UserController extends AppController
                 if($user_id = $instModel->saveInBD("user")){
                     $_SESSION['success'] = "Регистрация прошла успешна!";
                     $data['id'] = $user_id ;
+                    $data['role'] = "user";
                     foreach ($data as $key=>$value){
                         if($key != "password"){
                             $_SESSION["user"][$key] = $value;

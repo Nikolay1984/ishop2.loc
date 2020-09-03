@@ -125,6 +125,8 @@ class Pagination
              . $page1right.$page2right.$forward.$endpage.'</ul>';
 
     }
-
+    static public function getCountPages(){
+        return self::$countPages;
+    }
 
 }
