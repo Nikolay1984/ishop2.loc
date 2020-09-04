@@ -4456,3 +4456,163 @@
 =============================
 [2020-09-03 13:39:06] : Сообщение: страница не существует; Файл: C:\openserver\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
 =============================
+[2020-09-04 08:16:06] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 09:40:43] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 09:40:54] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:02:08] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:04:34] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:05:13] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:05:17] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:05:24] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:09:04] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:27:44] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:27:47] : Сообщение: action \app\controllers\admin\OrderController::changeAction  не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 34!
+=============================
+[2020-09-04 13:27:48] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:33:05] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:33:11] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:33:32] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:33:41] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:33:44] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:34:42] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:36:09] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:36:35] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:37:33] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:38:32] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:40:33] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:40:35] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:41:42] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:41:45] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:42:25] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:42:28] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:42:46] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:42:48] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:43:29] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:43:32] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:47:09] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:47:13] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:55:13] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:55:15] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 13:55:16] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:56:06] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 13:56:06] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:56:09] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:56:11] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:56:13] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 13:56:14] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:57:21] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:57:25] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 13:57:29] : Сообщение: SQLSTATE[HY000]: General error: 1364 Field 'user_id' doesn't have a default value; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 13:57:31] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:57:56] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 13:57:57] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:59:42] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 13:59:45] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:01:50] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:01:52] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 14:01:53] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 14:06:44] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:06:46] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:06:49] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 14:07:28] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:07:30] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:07:32] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 14:08:20] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:09:38] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:09:41] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:09:44] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 14:09:44] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 14:10:52] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:11:33] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:11:36] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:11:39] : Сообщение: страница не существует; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\Router.php; Строка: 41!
+=============================
+[2020-09-04 14:11:51] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:12:09] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:12:13] : Сообщение: SQLSTATE[01000]: Warning: 1265 Data truncated for column 'status' at row 1; Файл: C:\OpenServer\domains\ishop2.loc\vendor\ishop\core\libs\rb.php; Строка: 810!
+=============================
+[2020-09-04 14:13:00] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:14:57] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:15:01] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:15:03] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:15:06] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:20:21] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:20:24] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================
+[2020-09-04 14:20:33] : Сообщение: Call to a member function grep() on null; Файл: C:\OpenServer\domains\ishop2.loc\app\views\layouts\admin.php; Строка: 578!
+=============================

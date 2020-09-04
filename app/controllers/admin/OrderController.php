@@ -21,17 +21,62 @@ class OrderController extends AppController
         $htmlPagination = Pagination::getHtmlPagination();
 
 
-
-
-
-
-
-
-
         $this->setMeta("All orders");
         $this->set(compact("breadCrumbs","htmlPagination","orders","count"));
 
 
     }
+
+    public function viewAction(){
+        $breadCrumbs = BreadcrumbsRender::getBreadcrumbs("home","описание заказа","admin");
+        $order_id = $_GET['id'];
+        $order = \R::getRow("SELECT `order`.*, `user`.`name`, ROUND(SUM(`order_product`.`price`), 2) AS `sum` FROM `order`
+  JOIN `user` ON `order`.`user_id` = `user`.`id`
+  JOIN `order_product` ON `order`.`id` = `order_product`.`order_id`
+  WHERE `order`.`id` = ?
+  GROUP BY `order`.`id` ORDER BY `order`.`status`, `order`.`id` LIMIT 1", [$order_id]);
+
+        $order_products = \R::findAll('order_product','order_id = ?',[$order_id]);
+        $this->setMeta("Заказ № $order_id");
+
+        $this->set(compact("breadCrumbs","order","order_products"));
+
+    }
+
+    public function changeAction(){
+//        $id = $_GET["id"];
+//        $status = $_GET["status"];
+//        if(!empty($status)){
+//            $statuse = '1';
+//        }else{
+//            $statuse = '0';
+//        }
+//        $order = \R::load("order", $id);
+//        $order->status = '1';
+//        $order->update_at = date("Y-m-d H:i:s");
+//        $res = \R::store($order);
+//        $_SESSION['success'] = "Заказ успешно обнавлен";
+//        redirect();
+
+        $order_id = $_GET["id"];
+        $status = !empty($_GET['status']) ? '1' : '0';
+        $order = \R::load('order', $order_id);
+//        if(!$order){
+//            throw new \Exception('Страница не найдена', 404);
+//        }
+        $order->note = "qweqwe";
+        $order->status = $status ;
+        $order->update_at = date("Y-m-d H:i:s");
+
+        \R::store($order);
+        die();
+//        $_SESSION['success'] = 'Изменения сохранены';
+//        redirect();
+
+
+
+    }
+
+    public function deleteAction(){}
 
 }
