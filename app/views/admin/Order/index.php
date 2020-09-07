@@ -8,7 +8,7 @@
         <li class="active">Список заказов</li>
     </ol>
 </section>
-
+<?php if($count): ?>
 <!-- Main content -->
 <section class="content">
     <div class="row">
@@ -58,4 +58,9 @@
     </div>
 
 </section>
+<?php else: ?>
+    <div class="content">
+        <p>Список заказов пуст</p>
+    </div>
+<?php endif; ?>
 <!-- /.content -->

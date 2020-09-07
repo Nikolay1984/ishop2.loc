@@ -47,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <a  class="dropdown-toggle" data-toggle="dropdown">Account<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <?php if(isset($_SESSION['user'])): ?>
-                                <li><a href="">Добро пожаловать <?= $_SESSION['user']['name'] ?></a></li>
+                                <li><a href="">Добро пожаловать <?= $_SESSION['user']['name']. ":" . $_SESSION['user']['login'] ?></a></li>
                                 <li><a href="/user/logout">Logout</a></li>
                             <?php else: ?>
                                 <li><a href="/user/login">Login</a></li>

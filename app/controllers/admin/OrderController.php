@@ -21,6 +21,7 @@ class OrderController extends AppController
         $htmlPagination = Pagination::getHtmlPagination();
 
 
+
         $this->setMeta("All orders");
         $this->set(compact("breadCrumbs","htmlPagination","orders","count"));
 
@@ -44,39 +45,41 @@ class OrderController extends AppController
     }
 
     public function changeAction(){
-//        $id = $_GET["id"];
-//        $status = $_GET["status"];
-//        if(!empty($status)){
-//            $statuse = '1';
-//        }else{
-//            $statuse = '0';
-//        }
-//        $order = \R::load("order", $id);
-//        $order->status = '1';
-//        $order->update_at = date("Y-m-d H:i:s");
-//        $res = \R::store($order);
-//        $_SESSION['success'] = "Заказ успешно обнавлен";
-//        redirect();
 
         $order_id = $_GET["id"];
-        $status = !empty($_GET['status']) ? '1' : '0';
+
+        if($_GET['status'] == 1){
+            $status = "1";
+        }else{
+            $status = "2";
+        }
+
         $order = \R::load('order', $order_id);
-//        if(!$order){
-//            throw new \Exception('Страница не найдена', 404);
-//        }
-        $order->note = "qweqwe";
-        $order->status = $status ;
+
+        if(!$order){
+            throw new \Exception('Страница не найдена', 404);
+        }
+
+        $order->status = $status;
         $order->update_at = date("Y-m-d H:i:s");
 
         \R::store($order);
-        die();
-//        $_SESSION['success'] = 'Изменения сохранены';
-//        redirect();
+
+        $_SESSION['success'] = 'Изменения сохранены';
+        redirect();
 
 
 
     }
 
-    public function deleteAction(){}
+    public function deleteAction(){
+
+        $id_order = $_GET["id"];
+
+        $order = \R::load("order", $id_order);
+        \R::trash($order);
+        $_SESSION['success'] = "Товар успешно удален";
+        redirect('/admin/order/');
+    }
 
 }

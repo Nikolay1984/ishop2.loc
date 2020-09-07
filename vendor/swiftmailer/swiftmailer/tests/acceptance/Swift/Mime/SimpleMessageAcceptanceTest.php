@@ -334,7 +334,7 @@ class Swift_Mime_SimpleMessageAcceptanceTest extends \PHPUnit\Framework\TestCase
         $message->setFrom(['chris.corbyn@swiftmailer.org' => 'Chris']);
         $message->setReplyTo([
             'chris@w3style.co.uk' => 'Myself',
-            'my.other@address.com' => 'Me',
+            'searchProductsother@address.com' => 'Me',
             ]);
         $id = $message->getId();
         $date = $message->getDate();

@@ -2,10 +2,10 @@
 <section class="content-header">
     <h1>
         Заказ №<?=$order['id'];?>
-        <?php if(!$order['status']): ?>
-            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=1" class="btn btn-success btn-xs">Одобрить</a>
+        <?php if($order['status'] == 1): ?>
+            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=2" class="btn btn-success btn-xs">Одобрить</a>
         <?php else: ?>
-            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=0" class="btn btn-default btn-xs">Вернуть на доработку</a>
+            <a href="<?=ADMIN;?>/order/change?id=<?=$order['id'];?>&status=1" class="btn btn-default btn-xs">Вернуть на доработку</a>
         <?php endif; ?>
         <a href="<?=ADMIN;?>/order/delete?id=<?=$order['id'];?>" class="btn btn-danger btn-xs delete">Удалить</a>
     </h1>
@@ -51,7 +51,7 @@
                             </tr>
                             <tr>
                                 <td>Статус</td>
-                                <td><?=$order['status'] ? 'Завершен' : 'Новый';?></td>
+                                <td><?=$order['status']== 2 ? 'Завершен' : 'Новый';?></td>
                             </tr>
                             <tr>
                                 <td>Комментарий</td>

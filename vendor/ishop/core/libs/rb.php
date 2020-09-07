@@ -2785,7 +2785,7 @@ class OODBBean implements\IteratorAggregate,\ArrayAccess,\Countable,Jsonable
 	 * The first argument should be the key to store the value under,
 	 * the second argument should be the value. It is common to use
 	 * a path-like notation for meta data in RedBeanPHP like:
-	 * 'my.meta.data', however the dots are purely for readability, the
+	 * 'searchProductsmeta.data', however the dots are purely for readability, the
 	 * meta data methods do not store nested structures or hierarchies.
 	 *
 	 * @param string $path  path / key to store value under
