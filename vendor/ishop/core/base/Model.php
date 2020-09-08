@@ -57,12 +57,20 @@ abstract class Model
 
     public function saveInBD($table){
         $tbl = \R::dispense($table);
+        foreach ($this->attributes as $key=>$value){
+            $tbl->$key = $value;
+        }
 
+
+        return \R::store($tbl);
+    }
+
+    public function update($table,$id){
+        $tbl = \R::load($table, $id);
         foreach ($this->attributes as $key=>$value){
             $tbl->$key = $value;
         }
         return \R::store($tbl);
     }
-
 
 }

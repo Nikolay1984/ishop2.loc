@@ -30,17 +30,20 @@ class View
             $this->layout = false;
         }else{
             $this->layout = $layout ?: LAYOUT;
+
         }
 
     }
     public function render($date){
         $viewPath = APP . "/views/" . $this->prefix  . $this->controller . "/" .$this->view .".php";
+
         if(is_array($date)){
             extract($date);
         }
 
         if(file_exists($viewPath)){
             ob_start();
+
             require "$viewPath";
             $content =  ob_get_clean();
 
@@ -48,10 +51,10 @@ class View
             throw new \Exception("view {$viewPath} is not found",500);
         }
 
+
         if($this->layout !== false){
 
             $layoutPath = APP . "/views/layouts/"  . $this->layout .".php";
-
 
             if(file_exists($layoutPath)){
 
